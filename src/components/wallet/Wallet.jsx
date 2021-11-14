@@ -6,10 +6,11 @@ import Logo from "../../store/logo/alpha.png";
 
 function Wallet() {
   // tab option state
-  const [isTabActive, setTabActive] = useState(false);
+  const [isTabActive, setTabActive] = useState(true);
 
   const [getStakeValue, setStakeValue] = useState(0);
-  const [getWeeksValue, setWeeksValue] = useState({ x: 52, xmax: 52 });
+  const [getFlexAmount, setFlexAmount] = useState(0);
+  const [getWeeksValue, setWeeksValue] = useState({ x: 0, xmax: 52 });
 
   const flexible = () => {
     setTabActive(true);
@@ -17,19 +18,21 @@ function Wallet() {
   const locked = () => {
     setTabActive(false);
   };
-  const stackeAmount = () => {
-    setStakeValue(getStakeValue);
+  const stackeAmount = (e) => {
+    setStakeValue(e.target.value);
   };
-
+  const flexAmount = (e) => {
+    setFlexAmount(e.target.value);
+  };
 
   const data = 1 + (1 / 52) * getWeeksValue.x;
 
   // APR value
   let apr;
-  if(getWeeksValue.x <= 2){
+  if (getWeeksValue.x <= 2) {
     apr = 80;
-  }else{
-    apr = 80 + ( (getWeeksValue.x - 2) * (190-80)) / 50;
+  } else {
+    apr = 80 + ((getWeeksValue.x - 2) * (190 - 80)) / 50;
   }
 
   return (
@@ -38,7 +41,7 @@ function Wallet() {
         <Row className="justify-content-center">
           <Col lg="10">
             <Row className="align-items-center">
-              <Col lg={8}>
+              <Col lg={8} className="order-2 order-lg-1 mt-5 mt-lg-0">
                 <div className="wallet-content">
                   <div className="wallet-tab">
                     <ul className="d-flex">
@@ -74,14 +77,16 @@ function Wallet() {
                       </ul>
                       <Form className="my-4">
                         <Form.Control
-                          onChange={stackeAmount}
+                          onChange={flexAmount}
+                          min="0"
                           type="number"
-                          value={getStakeValue}
+                          value={getFlexAmount}
                           placeholder="Enter amount to stake"
+                          required
                         />
                       </Form>
                       <p>
-                        Est. APR: <span>{apr}%</span>
+                        Est. APR: <span>{apr} %</span>
                       </p>
                       <div className="flexible-bottom-content text-center mt-4">
                         <p>
@@ -142,8 +147,10 @@ function Wallet() {
                         <Form.Control
                           onChange={stackeAmount}
                           type="number"
+                          min="0"
                           value={getStakeValue}
                           placeholder="Enter amount to stake"
+                          required
                         />
                       </Form>
                       <p>
@@ -160,7 +167,7 @@ function Wallet() {
                   )}
                 </div>
               </Col>
-              <Col lg={4}>
+              <Col lg={4} className="order-1 order-lg-2">
                 <div className="banner-img">
                   <img src={Logo} alt="" />
                 </div>

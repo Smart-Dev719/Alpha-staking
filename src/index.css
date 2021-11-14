@@ -37,11 +37,12 @@ ol {
     list-style-type: none;
 }
 
+.navbar-toggler:focus,
 .form-control:focus,
 .btn:focus {
     box-shadow: none;
 }
 
-.css-19eete9-Slider{
+.css-19eete9-Slider {
     width: 100% !important;
 }
