@@ -1,0 +1,22 @@
+.navbar-box {
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    width: 50px;
+}
+
+.navbar-box .navbar-nav a {
+    color: #fff !important;
+}
+
+.navbar-wallet-btn {
+    border: 3px solid #202130;
+    background-color: #252839;
+    border-radius: .625rem;
+    padding: 8px 20px !important;
+}
+
+.navbar-wallet-btn:hover {
+    background-color: rgba(37, 40, 57, .8);
+}

@@ -1,0 +1,104 @@
+.wallet-box {
+    padding: 100px 0;
+}
+
+.wallet-content {
+    background-color: #1D1D1D;
+    padding: 30px;
+    border-radius: 10px;
+    border: 3px solid #696969;
+}
+
+.wallet-tab ul {
+    background-color: #696969;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.wallet-tab ul li {
+    width: 50%;
+}
+
+.wallet-tab ul li button {
+    color: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    height: 45px;
+}
+
+.wallet-tab ul li button:hover {
+    color: #fff;
+}
+
+.wallet-tab ul li button.active {
+    background-color: #000;
+}
+
+.locked-content input,
+.flexible-content input {
+    height: 50px;
+    background-color: #28272D;
+    color: #fff;
+}
+
+.locked-content input::-webkit-outer-spin-button,
+.locked-content input::-webkit-inner-spin-button,
+.flexible-content input::-webkit-outer-spin-button,
+.flexible-content input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.locked-content input:focus,
+.flexible-content input:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.locked-content ul li,
+.flexible-content ul li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.locked-content>p,
+.flexible-bottom-content p,
+.flexible-content>p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.flexible-bottom-content {
+    background-color: #28272D;
+    padding: 24px 50px;
+    border-radius: 6px;
+    border: 2px solid #696969;
+}
+
+.flexible-bottom-content p {
+    color: #fff;
+    font-weight: 600;
+}
+
+.locked-content .btn,
+.flexible-content .btn {
+    background-color: #696969;
+    padding: 14px 0;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.locked-content .btn:hover,
+.flexible-content .btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+.banner-img img {
+    width: 100%;
+}
