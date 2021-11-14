@@ -81,7 +81,7 @@ function Wallet() {
                         />
                       </Form>
                       <p>
-                        Est. APR: <span>90.21%</span>
+                        Est. APR: <span>{apr}%</span>
                       </p>
                       <div className="flexible-bottom-content text-center mt-4">
                         <p>
